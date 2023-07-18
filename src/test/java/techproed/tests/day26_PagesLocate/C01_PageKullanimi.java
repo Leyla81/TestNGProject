@@ -23,6 +23,7 @@ public class C01_PageKullanimi {
 //kullaniciAdi, kullaniciSifre, submitButton elementlerini locate edelim
        // kullaniciAdi=Admin
         //kullaniciSifre=admin123
+
         OpenSourcePage openSourcePage =new OpenSourcePage();//Pages altındakı class ile obje olusturduk
 
         openSourcePage.username.sendKeys(ConfigReader.getProperty("username_opensource"));
@@ -34,5 +35,7 @@ public class C01_PageKullanimi {
 
 //Login Testinin basarili oldugunu test et
         Assert.assertTrue(openSourcePage.verify.isDisplayed());
+        //sayfayı kapatınız
+        Driver.closeDriver();
     }
 }

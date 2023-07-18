@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chromium.ChromiumDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 import java.time.Duration;
 
@@ -25,10 +26,32 @@ public class Driver {
     public static WebDriver getDriver() {
         //method olusturduk
 
+        /*
+.properties dosyasına key olarak browser ve değerini aşağıda oluşturduğumuz switch case lerden birini seçeriz
+ve sectiğimiz driver çalışır
+ */
+
         if (driver == null) { //---Driver 'a deger atamamıssa
 
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            switch (ConfigReader.getProperty("browser")){
+                case "chrome":
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver();
+                    break;
+                case "edge":
+                    WebDriverManager.edgedriver().setup();
+                    driver=new EdgeDriver();
+                    break;
+                case "safari":
+                    WebDriverManager.safaridriver().setup();
+                    driver=new EdgeDriver();
+                    break;
+                default:
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver();
+
+            }
+
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 

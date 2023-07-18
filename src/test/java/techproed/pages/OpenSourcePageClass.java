@@ -28,7 +28,10 @@ public class OpenSourcePageClass {
         return Driver.getDriver().findElement(By.xpath("//h6"));
     }
 
-
+/*
+methodları class ismi ile cagırırız ---->bakınız OpenSourcePageClass ve C02_PageKullnimi
+constructor ları ise obje olusturarak obje ismi ile cagirırız ---->bakınız OpenSourcePage ve C01_PageKullnimi
+ */
 
 
 

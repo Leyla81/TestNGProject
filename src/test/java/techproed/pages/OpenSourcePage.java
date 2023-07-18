@@ -8,13 +8,14 @@ import techproed.utilities.Driver;
 public class OpenSourcePage {
 
 /*
-bir sayfanın locatelerini page class ında tutarız
+
+TestNG de bir sayfanın locatelerini page package altında class lar icinde  tutarız
 page classın da locate lere ulaasabilmek icin PageFactory'den initelements() methodu
 ile driver 'imizii bu class a tanımlarız.
 findelement() methodu yerine @findBy notasyonu ile bu notasyona parametre olllarak locateleri giriniz
  */
 
-public OpenSourcePage(){ //constructor kullandık
+public OpenSourcePage(){  //constructor kullandık
     PageFactory.initElements(Driver.getDriver(),this);
 
 }

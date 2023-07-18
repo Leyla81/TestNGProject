@@ -20,11 +20,15 @@ public class C02_PageKullnimi {
 //kullaniciAdi, kullaniciSifre, submitButton elementlerini locate edelim
         // kullaniciAdi=Admin-----properties dosyasında
         //kullaniciSifre=admin123-----properties dosyasında
+
         OpenSourcePageClass.username().sendKeys(ConfigReader.getProperty("username_opensource"));
         OpenSourcePageClass.password().sendKeys(ConfigReader.getProperty("password_opensource"));
         OpenSourcePageClass.loginButton().click();
 
         //Login Testinin basarili oldugunu test et
         Assert.assertTrue(OpenSourcePageClass.verify().isDisplayed());
+
+        //sayfayı kapatın
+        Driver.closeDriver();
     }
 }
