@@ -10,10 +10,12 @@ public class C01_Annotations {
     }
     @BeforeTest
     public void beforeTest(){
+
         System.out.println("before Test = "+"Her testen once bir kez calisir");
     }
     @BeforeClass
     public void beforeClass (){
+
         System.out.println("beforeClass = "+"Her classdan once bir kez calisir");
     }
     @BeforeMethod

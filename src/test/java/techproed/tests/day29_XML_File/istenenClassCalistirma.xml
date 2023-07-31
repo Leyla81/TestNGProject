@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/yusuf/IdeaProjects/TestNGProject/src/test/java/techproed/tests/day25PageObjectmodel">
+        <classes>
+            <class name="techproed.tests.day25PageObjectmodel.C01_DriverTest"></class>
+            <class name="techproed.tests.day26_PagesLocate.C04_PositiveTest"></class>
+            <class name="techproed.tests.day27_smokeTest_Excel.C01_NegativeTest"></class>
+        </classes>
+    </test>
+</suite>

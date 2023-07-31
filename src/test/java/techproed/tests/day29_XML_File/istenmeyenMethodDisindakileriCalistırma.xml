@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="istenmeyen method disindakileri calistirma">
+        <classes>
+            <class name="techproed.tests.day25PageObjectmodel.C01_DriverTest">
+                <methods>
+
+                    <exclude name="test04"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>

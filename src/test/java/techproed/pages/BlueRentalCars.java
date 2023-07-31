@@ -17,10 +17,13 @@ public class BlueRentalCars {
     @FindBy(xpath = "//*[@name='email']")
     public WebElement email;
 
-@FindBy(xpath = "//button[@id='dropdown-basic-button']")
+    @FindBy(xpath = "//button[@id='dropdown-basic-button']")
     public WebElement loginVerify;
-
-
-
+    @FindBy(xpath = "//*[@role='alert']")
+    public WebElement fakeVerify;
+    @FindBy(xpath = "//*[.='Logout']")
+    public WebElement logout;
+    @FindBy(xpath = "//*[.='OK']")
+    public WebElement ok;
 
 }
